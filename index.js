@@ -3,6 +3,7 @@ let scoreDiv = document.querySelector('.score span')
 let hiScoreDiv = document.querySelector('.hi-score span')
 let instruction = document.querySelector(".instruction")
 let btn = document.querySelector(".btn")
+let arrowButtons = document.querySelector('.arrow-buttons')
 
 // defining game variables
 let gridSize = 20
@@ -17,6 +18,7 @@ let gameStarted = false
 let hiScore = localStorage.getItem('snake-hiScore')
 function game() {
     instruction.style.display = 'none'
+    arrowButtons.style.display = 'grid'
     if (!gameOver) {
         gameEngine()
     }
@@ -127,3 +129,21 @@ btn.addEventListener('click', () => {
         game()
     }
 })
+
+// creating buttons function for mobile devices
+
+function moveUp() {
+    if (inputDir.y === 0) inputDir = { x: 0, y: -1 }
+}
+
+function moveDown() {
+    if (inputDir.y === 0) inputDir = { x: 0, y: 1 }
+}
+
+function moveLeft() {
+    if (inputDir.x === 0) inputDir = { x: -1, y: 0 }
+}
+
+function moveRight() {
+    if (inputDir.x === 0) inputDir = { x: 1, y: 0 }
+}

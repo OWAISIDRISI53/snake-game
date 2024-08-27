@@ -86,3 +86,56 @@ img {
 .hide {
   display: none;
 }
+
+/* Default: Hide arrow buttons on larger screens (desktop) */
+.arrow-buttons {
+  display: none;
+}
+
+/* Show arrow buttons on smaller screens (mobile) */
+@media only screen and (max-width: 768px) {
+  .arrow-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 50px); /* 3 columns with 50px width each */
+    grid-template-rows: repeat(3, 50px); /* 3 rows with 50px height each */
+    gap: 10px; /* Gap between buttons */
+    justify-content: center; /* Center the button group */
+    align-items: center; /* Align the button group */
+    margin: 20px auto; /* Center the grid on the page */
+    display: none;
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .arrow.up {
+    grid-column: 2; /* Position in the middle of the top row */
+    grid-row: 1;
+  }
+
+  .arrow.left {
+    grid-column: 1; /* Position in the middle of the left column */
+    grid-row: 2;
+  }
+
+  .arrow.down {
+    grid-column: 2; /* Position in the middle of the bottom row */
+    grid-row: 3;
+  }
+
+  .arrow.right {
+    grid-column: 3; /* Position in the middle of the right column */
+    grid-row: 2;
+  }
+
+  .arrow:hover {
+    background-color: #aaa;
+  }
+}
