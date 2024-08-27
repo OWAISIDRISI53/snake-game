@@ -139,3 +139,19 @@ img {
     background-color: #aaa;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .gameBoard {
+    width: 95%;
+  }
+  img {
+    height: 330px;
+    width: 300px;
+    margin-left: 20px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+}
