@@ -1,0 +1,27 @@
+Here’s a step-by-step process to create a Snake Game in JavaScript without using the canvas:
+
+Step 1: Setup the Game Board
+Create a grid layout using HTML elements (e.g., div tags) to represent the game board.
+Define the size of the grid, for example, 20x20 cells.
+Style the grid using CSS to give it a uniform look.
+
+---------------------------------------------------
+Step 3: Snake Movement
+Use setInterval or requestAnimationFrame to move the snake continuously.
+Update the snake's position based on the current direction (up, down, left, or right).
+Keep track of the snake's current direction using key presses (event listeners).
+Step 4: Snake Growth
+When the snake eats the food (i.e., the head of the snake reaches the food’s position), increase the size of the snake by adding a new segment to the tail.
+After eating food, generate a new food item at a random position.
+Step 5: Collision Detection
+Check if the snake hits the walls (grid boundaries) or itself (head touching any other part of the body). If a collision is detected, the game is over.
+Step 6: Game Over and Restart
+When a collision happens, show a "Game Over" message and provide a button or option to restart the game.
+Reset the snake, food, and game state.
+Step 7: Scoring System
+Keep track of the score based on how many food items the snake eats.
+Display the score on the screen and update it dynamically.
+Step 8: Styling the Game
+Style the snake, food, and grid using CSS to make the game visually appealing.
+Use colors or simple animations for the snake and food to improve the user experience.
+This process covers the core logic to build the game without using the canvas.

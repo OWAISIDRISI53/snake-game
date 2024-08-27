@@ -1,0 +1,88 @@
+body {
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gameBoard {
+  height: 400px;
+  width: 400px;
+  box-shadow: black 10px 10px 50px;
+  background: rgb(58, 129, 215);
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.head {
+  background: rgb(52, 44, 85);
+}
+
+.snake {
+  background: rgb(49, 37, 222);
+}
+
+.food {
+  background: red;
+}
+
+.scoreDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  font-size: 25px;
+  padding: 10px;
+  font-weight: 400;
+  font-family: fantasy;
+  letter-spacing: 1px;
+  color: rgb(99, 84, 84);
+}
+
+.scoreDiv span {
+  color: red;
+  font-size: 27px;
+}
+
+.instruction {
+  align-self: center;
+  justify-self: center;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+img {
+  height: 350px;
+  width: 350px;
+  margin-left: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  margin: 0 160px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.6;
+  cursor: pointer;
+}
+
+.btn:hover {
+  padding: 11px 21px;
+  background: white;
+  color: black;
+  border: none;
+}
+
+.block {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
